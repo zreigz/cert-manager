@@ -22,10 +22,8 @@ import (
 	"k8s.io/apimachinery/pkg/types"
 )
 
+// +k8s:openapi-gen=true
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
-
-// ChallengePayload describes a request/response for presenting or cleaning up
-// an ACME challenge resource
 type ChallengePayload struct {
 	metav1.TypeMeta `json:",inline"`
 
